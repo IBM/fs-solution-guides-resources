@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  platform:
+    architectures:
+      - amd64
+    graph: true
+  operators:
+    - catalog: registry.redhat.io/redhat/redhat-operator-index:v4.20
+      packages:
+        - name: volsync-product
+        - name: advanced-cluster-management 
+        - name: cluster-observability-operator
+        - name: odf-operator
+  additionalImages:
+  - name: registry.redhat.io/ubi9/ubi:latest

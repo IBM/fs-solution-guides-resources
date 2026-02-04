@@ -1,0 +1,9 @@
+apiVersion: portieris.cloud.ibm.com/v1
+kind: ImagePolicy
+metadata:
+  name: test-policy-portieris
+  namespace: openshift-marketplace
+spec:
+   repositories:
+    - name: "de.icr.io/final-catalog/*"
+      policy:
